@@ -22,3 +22,21 @@ hamburgerBtn.addEventListener('click', () => {
         }, 500); // 500ms = длительность transition в CSS
     }
 });
+
+
+const navProfile = document.getElementById('profile');
+const profileSide = document.querySelector('.profile-side');
+
+navProfile.addEventListener('click', () => {
+    if (profileSide.classList.contains('hidden')) {
+        profileSide.classList.remove('hidden');
+        setTimeout(() => {
+            profileSide.classList.add('active');
+        }, 10);
+    } else {
+        profileSide.classList.remove('active');
+        setTimeout(() => {
+            profileSide.classList.add('hidden');
+        }, 500);
+    }
+});

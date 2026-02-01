@@ -18,7 +18,7 @@
                 <button class="nav-btn">Новости</button>
                 <button class="nav-btn">Скачать</button>
                 <button class="nav-btn">Рейтинг</button>
-                <button class="nav-btn">Профиль</button>
+                <button class="nav-btn" id="profile">Профиль</button>
             </div>
             
             <button class="hamburger" id="hamburger-btn">
@@ -28,14 +28,39 @@
             </button>
         </div>
     </nav>
+
+    <!-- Боковое меню -->
+    <aside class="profile-side hidden">
+        <div class="profile-header">
+            <h3>Профиль</h3>
+            <button class="close-profile">×</button>
+        </div>
+        
+        <nav class="profile-menu">
+            <ul>
+                <li><a href="#">Мой аккаунт</a></li>
+                <li><a href="#">Настройки</a></li>
+                <li class="menu-parent-item">
+                    <a href="#">
+                        Статистика
+                        <i class="arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#">Рекорды</a></li>
+                        <li><a href="#">Достижения</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Выход</a></li>
+            </ul>
+        </nav>
+    </aside>
     
     <div class="body">
         <h1>GameAboutCat</h1>
         <div class="description">
           <h2>Описание игры.</h2>
-          <p>Представьте: пушистый котёнок с большими глазами и широко открытым ртом ждёт свой обед. В корзине рядом плещутся свежие рыбки, готовые отправиться прямиком в его животик. Ваша задача проста, но увлекательна — перетаскивайте рыбок из корзины прямо в рот голодному малышу! 
-          Чем точнее попадание и быстрее реакция — тем больше баллов вы заработаете. Пропустите рыбку мимо — котёнок грустно мяукнет и потеряет драгоценные секунды. Простая механика, мгновенная награда и бесконечная милота — вот рецепт идеального времяпрепровождения для всей семьи!</p>
-          <img src="img/comp.gif" alt="Комп">
+          <p>Ваша задача проста, но увлекательна — перетаскивайте рыбок из корзины прямо в рот голодному малышу! 
+          Чем точнее попадание и быстрее реакция — тем больше баллов вы заработаете.</p>
         </div>
     </div>
     <script src="index.js"></script>

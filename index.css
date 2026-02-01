@@ -1,388 +1,197 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-.navbar {
-  background: #cd7f32;
-  padding: 15px 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-brand {
-  display: inline-block;
-}
-
-.navbar-brand img {
-  display: block;
-}
-
-/* Скрытие меню */
-.hidden {
-  display: none !important;
-}
-
-/* Меню */
-#navbar-menu {
-  display: flex;
-  gap: 15px;
-  padding: 10px 5px;
-  transform: translateX(60%);
-  opacity: 0;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-}
-
-#navbar-menu.active {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.nav-btn {
-  padding: 10px 20px;
-  background: white;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.nav-btn:hover {
-  background: #f8f8f8;
-  border-color: #ccc;
-  color: #f44f25;
-  transform: translateY(-2px);
-}
-
-.hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.hamburger:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.hamburger-icon {
-  background: white;
-  border-radius: 50%;
-  width: 60px;     
-  height: 60px;      
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.hamburger-icon img {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  z-index: 3;
-}
-
-body {
-  background: linear-gradient(135deg, #ff8c00 0%, #fad0c4 100%);
-  min-height: 100vh;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    url('https://img.icons8.com/?size=100&id=ODdqIRK8aFHl&format=png&color=000000');
-  background-size: 200px 200px;
-  background-repeat: repeat;
-  opacity: 0.08;
-  pointer-events: none;
-}
-
-@font-face{
-  font-family: 'MyCustomFont';
-  src: url('font/MyCustomFont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.body h1{
-  text-align: center;
-  position: relative;
-  top: 20px;
-  font-family: 'MyCustomFont';
-  font-size: 36px;
-}
-
-
-.description {
-  margin-top: 10px;
-  padding-left: 100px;
-}
-
-.description h2{
-  margin-top: 20px;
-  font-size: 24px;
-  font-family: 'MyCustomFont';
-}
-
-.description p{
-  margin-top: 20px;
-  padding: 10px 15px;
-  font-size: 20px;
-  margin-right: 60%;
-}
-
-/* ===== АДАПТИВНОСТЬ ДЛЯ ВСЕХ УСТРОЙСТВ ===== */
-
-/* Маленькие телефоны (до 480px) */
-@media (max-width: 480px) {
-  .container {
-    padding: 0 10px;
+@media (min-width: 1500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
-  .hamburger {
-    width: 55px;
-    height: 55px;
-    padding: 5px;
-  }
-  
-  .hamburger-icon {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .hamburger-icon img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .nav-btn {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-  
-  .description {
-    padding-left: 10px;
-    margin-right: 0;
-  }
-  
-  .description h1 {
-    font-size: 22px;
-  }
-  
-  .description h2 {
-    font-size: 20px;
-  }
-  
-  .description p {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-}
 
-/* Телефоны (481px - 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .container {
-    padding: 0 15px;
+  body {
+    font-family: Arial, sans-serif;
   }
-  
-  .hamburger {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .hamburger-icon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .hamburger-icon img {
-    width: 25px;
-    height: 25px;
-  }
-  
-  .nav-btn {
-    padding: 10px 15px;
-    font-size: 13px;
-  }
-  
-  .description {
-    padding-left: 15px;
-    margin-right: 0;
-  }
-  
-  .description h1 {
-    font-size: 26px;
-  }
-  
-  .description h2 {
-    font-size: 22px;
-  }
-  
-  .description p {
-    font-size: 15px;
-    padding: 10px 15px;
-  }
-}
 
-/* Планшеты (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .container {
-    padding: 0 20px;
+  .navbar {
+    background: #cd7f32;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
-  
-  .hamburger {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .hamburger-icon {
-    width: 55px;
-    height: 55px;
-  }
-  
-  .hamburger-icon img {
-    width: 28px;
-    height: 28px;
-  }
-  
-  .nav-btn {
-    padding: 10px 18px;
-    font-size: 14px;
-  }
-  
-  .description {
-    padding-left: 20px;
-    margin-right: 0;
-  }
-  
-  .description h1 {
-    font-size: 30px;
-  }
-  
-  .description h2 {
-    font-size: 24px;
-  }
-  
-  .description p {
-    font-size: 16px;
-    padding: 12px 18px;
-  }
-}
 
-/* Ноутбуки (1025px - 1440px) */
-@media (min-width: 1025px) and (max-width: 1440px) {
   .container {
     max-width: 1200px;
-    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  
-  .hamburger {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .hamburger-icon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .hamburger-icon img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .nav-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-  
-  .description {
-    padding-left: 50px;
-    margin-right: 60%;
-  }
-  
-  .description h1 {
-    font-size: 34px;
-  }
-  
-  .description h2 {
-    font-size: 24px;
-  }
-  
-  .description p {
-    font-size: 18px;
-    padding: 12px 18px;
-  }
-}
 
-/* Большие десктопы (больше 1440px) */
-@media (min-width: 1441px) {
-  .container {
-    max-width: 1400px;
-    padding: 0 20px;
+  .navbar-brand {
+    display: inline-block;
   }
-  
+
+  .navbar-brand img {
+    display: block;
+  }
+
+  /* Скрытие меню */
+  .hidden {
+    display: none !important;
+  }
+
+  /* Меню */
+  #navbar-menu {
+    display: flex;
+    gap: 15px;
+    padding: 10px 5px;
+    transform: translateX(60%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  #navbar-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .nav-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .nav-btn:hover {
+    background: #f8f8f8;
+    border-color: #ccc;
+    color: #f44f25;
+    transform: translateY(-2px);
+  }
+
   .hamburger {
-    width: 60px;
-    height: 60px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s;
   }
-  
+
+  .hamburger:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
   .hamburger-icon {
-    width: 60px;
-    height: 60px;
+    background: white;
+    border-radius: 50%;
+    width: 60px;     
+    height: 60px;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
   }
-  
+
   .hamburger-icon img {
     width: 30px;
     height: 30px;
+    position: relative;
+    z-index: 3;
   }
-  
-  .nav-btn {
-    padding: 10px 20px;
-    font-size: 14px;
+
+  body {
+    background: linear-gradient(135deg, #ff8c00 0%, #fad0c4 100%);
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
   }
-  
-  .description {
-    padding-left: 100px;
-    margin-right: 60%;
+
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      url('https://img.icons8.com/?size=100&id=ODdqIRK8aFHl&format=png&color=000000');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    opacity: 0.08;
+    pointer-events: none;
   }
-  
-  .description h1 {
+
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('font/MyCustomFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .body h1 {
+    text-align: center;
+    position: relative;
+    top: 20px;
+    font-family: 'MyCustomFont';
     font-size: 36px;
+    color: #fffafa;
   }
-  
+
   .description h2 {
+    text-align: center;
+    margin-top: 40px;
     font-size: 24px;
+    font-family: 'MyCustomFont';
+  }
+
+  .description p {
+    max-width: 800px;       /* Ограничение ширины */
+    margin: 0 auto;         /* Центрирование блока */
+    text-align: left;       /* Текст появляется слева */
+    overflow: hidden;
+    white-space: pre-wrap;
+    border-right: 3px solid #000; /* Мигающий курсор */
+    width: 0;
+    animation: typing 3s steps(40) forwards, blink 0.5s step-end infinite;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 10px 0;
   }
   
-  .description p {
-    font-size: 20px;
-    padding: 10px 15px;
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
   }
+  
+  @keyframes blink {
+    50% { border-color: transparent }
+  }
+
+  .profile-side {
+    transform: translateX(-30%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    background-color: #c1876b;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .profile-side.active {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+
+  .profile-side.hidden {
+    display: none;
+  }
+
+  .profile-header{
+    height: 30%;
+  }
+
+
 }
