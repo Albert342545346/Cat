@@ -156,3 +156,72 @@ body::before {
   font-size: 20px;
   margin-right: 60%;
 }
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* На маленьких экранах (телефоны) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hamburger {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .hamburger-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .hamburger-icon img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .nav-btn {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+  
+  .description {
+    padding-left: 15px;
+    margin-right: 0;
+  }
+  
+  .description h1 {
+    font-size: 28px;
+  }
+  
+  .description p {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* На очень маленьких экранах */
+@media (max-width: 480px) {
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .description h1 {
+    font-size: 24px;
+  }
+  
+  .description p {
+    font-size: 14px;
+  }
+  
+  .hamburger-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .hamburger-icon img {
+    width: 20px;
+    height: 20px;
+  }
+}
