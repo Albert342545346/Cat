@@ -157,10 +157,56 @@ body::before {
   margin-right: 60%;
 }
 
-/* ===== АДАПТИВНОСТЬ ===== */
+/* ===== АДАПТИВНОСТЬ ДЛЯ ВСЕХ УСТРОЙСТВ ===== */
 
-/* На маленьких экранах (телефоны) */
-@media (max-width: 768px) {
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .hamburger {
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+  }
+  
+  .hamburger-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .hamburger-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .nav-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .description {
+    padding-left: 10px;
+    margin-right: 0;
+  }
+  
+  .description h1 {
+    font-size: 22px;
+  }
+  
+  .description h2 {
+    font-size: 20px;
+  }
+  
+  .description p {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* Телефоны (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: 0 15px;
   }
@@ -191,37 +237,152 @@ body::before {
   }
   
   .description h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+  
+  .description h2 {
+    font-size: 22px;
   }
   
   .description p {
-    font-size: 16px;
-    padding: 10px;
+    font-size: 15px;
+    padding: 10px 15px;
   }
 }
 
-/* На очень маленьких экранах */
-@media (max-width: 480px) {
+/* Планшеты (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .hamburger {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .hamburger-icon {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .hamburger-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  
   .nav-btn {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  .description {
+    padding-left: 20px;
+    margin-right: 0;
   }
   
   .description h1 {
+    font-size: 30px;
+  }
+  
+  .description h2 {
     font-size: 24px;
   }
   
   .description p {
-    font-size: 14px;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
+/* Ноутбуки (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  
+  .hamburger {
+    width: 60px;
+    height: 60px;
   }
   
   .hamburger-icon {
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
   }
   
   .hamburger-icon img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .description {
+    padding-left: 50px;
+    margin-right: 60%;
+  }
+  
+  .description h1 {
+    font-size: 34px;
+  }
+  
+  .description h2 {
+    font-size: 24px;
+  }
+  
+  .description p {
+    font-size: 18px;
+    padding: 12px 18px;
+  }
+}
+
+/* Большие десктопы (больше 1440px) */
+@media (min-width: 1441px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 20px;
+  }
+  
+  .hamburger {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .hamburger-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .hamburger-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .description {
+    padding-left: 100px;
+    margin-right: 60%;
+  }
+  
+  .description h1 {
+    font-size: 36px;
+  }
+  
+  .description h2 {
+    font-size: 24px;
+  }
+  
+  .description p {
+    font-size: 20px;
+    padding: 10px 15px;
   }
 }
