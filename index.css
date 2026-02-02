@@ -148,12 +148,11 @@
   }
 
   .description p {
-    max-width: 800px;       /* Ограничение ширины */
+    max-width: 35%;       /* Ограничение ширины */
     margin: 0 auto;         /* Центрирование блока */
     text-align: left;       /* Текст появляется слева */
     overflow: hidden;
     white-space: pre-wrap;
-    border-right: 3px solid #000; /* Мигающий курсор */
     width: 0;
     animation: typing 3s steps(40) forwards, blink 0.5s step-end infinite;
     font-size: 20px;
@@ -174,7 +173,7 @@
     transform: translateX(-30%);
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    background-color: #c1876b;
+    background-color: #cd7f32;
     width: 25%;
     height: 100%;
     position: absolute;
@@ -182,16 +181,85 @@
 
   .profile-side.active {
     transform: translateX(0);
-    opacity: 0.7;
+    opacity: 1;
   }
 
   .profile-side.hidden {
     display: none;
   }
 
-  .profile-header{
-    height: 30%;
+  .disable {
+    user-select: none;
   }
 
+  .profile-header{
+    height: 15%;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+    background-color: #ccc;
+    text-align: center;
+  }
+
+  .profile-header h3{
+    margin: 0%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .avatar img{
+    border-radius: 100% 100% 100% 100%;
+    width: 25%;
+    height: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .avatar img:hover{
+    scale: 1.1;
+    filter: brightness(70%);
+  }
+
+  .button{
+    position:relative;
+    display:inline-block;
+    margin:20px;
+  }
+  
+  .button a{
+    color:white;
+    font-family: 'MyCustomFont';
+    font-weight:bold;
+    font-size:16px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    padding:15px 20px;
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    border-radius: 5px;
+  }
+  
+  .button a:active{
+    top:10px;
+    background-color:#F78900;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  }
+  
+  .button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    border-radius: 5px;
+  }
 
 }
