@@ -169,6 +169,26 @@
     50% { border-color: transparent }
   }
 
+  .description img{
+    display: block;
+    margin: 0 auto;
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  }
+
+  .description video{
+    display: block;
+    margin: 0 auto;
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  }
+
   .profile-side {
     transform: translateX(-30%);
     opacity: 0;
